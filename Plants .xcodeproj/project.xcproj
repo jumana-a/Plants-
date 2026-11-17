@@ -11,8 +11,46 @@
     ],
   },
   "files": [
-    { "kind": "folder", "path": "Plants", "target-membership": [ "Plants" ] },
     {
+      "kind": "group",
+      "path": "PlantsStories",
+      "children": [
+        {
+          "kind": "group",
+          "path": "Plants",
+          "children": [
+            {
+              "kind": "group",
+              "path": "Model",
+              "children": [
+                { "path": "Plant.swift", "target-membership": [ "Plants/compile-sources" ] },
+              ],
+            }, {
+              "kind": "group",
+              "path": "View",
+              "children": [
+                { "path": "StartView.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "PlantListView.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "SetReminderView.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "RootView.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "SharedComponents.swift", "target-membership": [ "Plants/compile-sources" ] },
+              ],
+            }, {
+              "kind": "group",
+              "path": "ViewModel",
+              "children": [
+                { "path": "<PROJECT>/PlantsApp/PlantsFolders 2/Plants/ViewModel/StartViewModel.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "PlantListViewModel.swift", "target-membership": [ "Plants/compile-sources" ] },
+                { "path": "SetReminderViewModel.swift", "target-membership": [ "Plants/compile-sources" ] },
+              ],
+            },
+            { "path": "Assets.xcassets", "target-membership": [ "Plants/resources" ] },
+            { "path": "Planto.icon", "target-membership": [ "Plants/resources" ] },
+            { "path": "MyApp.swift", "target-membership": [ "Plants/compile-sources" ] },
+          ],
+        },
+      ],
+    }, {
       "kind": "group",
       "name": "Products",
       "children": [
@@ -32,6 +70,8 @@
         "resources",
       ],
       "build-settings": {
+        "ASSETCATALOG_COMPILER_APPICON_NAME": "Planto",
+        "ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS": "YES",
         "CODE_SIGN_STYLE": "Automatic",
         "CURRENT_PROJECT_VERSION": "1",
         "ENABLE_APP_SANDBOX": "YES",
