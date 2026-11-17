@@ -15,7 +15,7 @@ struct SetReminderView: View {
             ZStack {
                 Text("Set Reminder")
                     .font(.system(size: 17, weight: .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AppColor.textPrimary.color)
 
                 HStack {
                     Button {
@@ -23,7 +23,7 @@ struct SetReminderView: View {
                     } label: {
                         Image(systemName: "xmark")
                             .font(.system(size: 18, weight: .medium))
-                            .foregroundStyle(.white)
+                            .foregroundStyle(AppColor.textPrimary.color)
                             .frame(width: 24, height: 24)
                     }
                     .buttonStyle(.glass)
@@ -53,7 +53,7 @@ struct SetReminderView: View {
             HStack(spacing: 8) {
                 Text("Plant Name")
                     .font(.system(size: 17, weight: .medium))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AppColor.textPrimary.color)
 
                 TextField(
                     "",
@@ -61,7 +61,7 @@ struct SetReminderView: View {
                     prompt: Text("Pothos").foregroundStyle(AppColor.textGray.color)
                 )
                 .font(.system(size: 17))
-                .foregroundStyle(.white)
+                .foregroundStyle(AppColor.textPrimary.color)
                 .tint(AppColor.brightGreen.color)
             }
             .padding(.horizontal, 19)
@@ -144,7 +144,7 @@ struct FormRow<Value: Hashable & CaseIterable & RawRepresentable>: View where Va
             }
         }
         .font(.system(size: 17))
-        .foregroundStyle(.white)
+        .foregroundStyle(AppColor.textPrimary.color)
         .padding(.horizontal, 20)
         .frame(height: 47)
     }

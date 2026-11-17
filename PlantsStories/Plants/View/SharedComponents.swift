@@ -15,6 +15,7 @@ enum AppColor: String {
     case yellow = "Yellow"
     case blue = "Blue"
     case red = "Red"
+    case textPrimary = "TextPrimary"
 
     var color: Color {
         Color(rawValue)
@@ -28,7 +29,7 @@ struct PlantsHeader: View {
         VStack(alignment: .leading, spacing: 0) {
             Text("My Plants 🌱")
                 .font(.system(size: 34, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(AppColor.textPrimary.color)
                 .padding(.horizontal, 24)
                 .padding(.top, 16)
 

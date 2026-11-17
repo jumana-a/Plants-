@@ -32,7 +32,7 @@ struct TodayView: View {
 
             Text(viewModel.todayStatus.message)
                 .font(.system(size: 17))
-                .foregroundStyle(.white)
+                .foregroundStyle(AppColor.textPrimary.color)
                 .padding(.top, 39)
 
             GeometryReader { geo in
@@ -89,7 +89,7 @@ struct AllDoneView: View {
                     .fill(AppColor.chip.color)
                     .frame(width: 220, height: 220)
 
-                Image("plantPot")
+                Image("PlantPot2")
                     .resizable()
                     .scaledToFit()
                     .frame(width: 164, height: 200)
@@ -97,7 +97,7 @@ struct AllDoneView: View {
 
             Text("All Done! 🎉")
                 .font(.system(size: 22, weight: .bold))
-                .foregroundStyle(.white)
+                .foregroundStyle(AppColor.textPrimary.color)
                 .padding(.top, 24)
 
             Text("All Reminders Completed")
@@ -157,7 +157,7 @@ struct PlantRow: View {
                             .foregroundStyle(.black.opacity(0.75))
                     } else {
                         Circle()
-                            .strokeBorder(Color.white.opacity(0.7), lineWidth: 1.5)
+                            .strokeBorder(AppColor.textPrimary.color.opacity(0.7), lineWidth: 1.5)
                     }
                 }
                 .frame(width: 24, height: 24)
@@ -168,11 +168,11 @@ struct PlantRow: View {
             VStack(alignment: .leading, spacing: 2) {
                 Label("in \(plant.room.rawValue)", systemImage: "location")
                     .font(.system(size: 14))
-                    .foregroundStyle(Color.white.opacity(0.5))
+                    .foregroundStyle(AppColor.textPrimary.color.opacity(0.5))
 
                 Text(plant.name)
                     .font(.system(size: 28))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AppColor.textPrimary.color)
 
                 HStack(spacing: 14) {
                     Chip(icon: "sun.max", text: plant.light.rawValue, color: AppColor.yellow.color)

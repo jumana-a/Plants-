@@ -17,7 +17,7 @@ struct StartView: View {
 
                 Text("Start your plant journey!")
                     .font(.system(size: 22, weight: .semibold))
-                    .foregroundStyle(.white)
+                    .foregroundStyle(AppColor.textPrimary.color)
 
                 Text("Now all your plants will be in one place and we will help you take care of them :)🪴")
                     .font(.system(size: 16))
